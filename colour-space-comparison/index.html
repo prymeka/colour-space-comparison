@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colour Spaces</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <script src="index.js" defer></script>
+    <main id="root">
+
+      <h1>Colour Space Comparison</h1>  
+      <section id="top">
+        <p id="description">
+          Comparison of uniformity of various colour spaces. Below are shown 6 "closest" colour to the reference selected. The colour spaces are effectively normalised to [0, 100] range and quantised by the delta. Standard Euclidean distance is used as the metric.
+        </p>
+        <div id="color-input">
+          <label for="color-picker">Select Reference Colour</label>
+          <input type="color" name="reference color" value="#fff" id="color-picker"/>
+          <p id="selected-color">#ffffff</p> 
+        </div>
+        <div id="delta-input">
+          <label for="delta">Delta</label> 
+          <input type="range" min="1" max="100" step="1" name="delta" value="1" id="delta">
+          <p id="selected-delta">&Delta;=1</p>
+        </div>
+      </section>
+
+      <section id="color-spaces-container">
+        <hr>
+
+        <div class="color-space-row" id="color-space-rgb">
+          <h5 class="color-space-title">RGB</h5>
+          <div class="colors-container">
+            <div class="color" id="rgb-color-1"></div>
+            <div class="color" id="rgb-color-2"></div>
+            <div class="color" id="rgb-color-3"></div>
+            <div class="color" id="rgb-color-4"></div>
+            <div class="color" id="rgb-color-5"></div>
+            <div class="color" id="rgb-color-6"></div>
+          </div>
+        </div>
+
+        <div class="color-space-row" id="color-space-hsl">
+          <h5 class="color-space-title">HSL</h5>
+          <div class="colors-container">
+            <div class="color" id="hsl-color-1"></div>
+            <div class="color" id="hsl-color-2"></div>
+            <div class="color" id="hsl-color-3"></div>
+            <div class="color" id="hsl-color-4"></div>
+            <div class="color" id="hsl-color-5"></div>
+            <div class="color" id="hsl-color-6"></div>
+          </div>
+        </div>
+
+        <div class="color-space-row" id="color-space-hsv">
+          <h5 class="color-space-title">HSV</h5>
+          <div class="colors-container">
+            <div class="color" id="hsv-color-1"></div>
+            <div class="color" id="hsv-color-2"></div>
+            <div class="color" id="hsv-color-3"></div>
+            <div class="color" id="hsv-color-4"></div>
+            <div class="color" id="hsv-color-5"></div>
+            <div class="color" id="hsv-color-6"></div>
+          </div>
+        </div>
+
+        <div class="color-space-row" id="color-space-xyz">
+          <h5 class="color-space-title">XYZ</h5>
+          <div class="colors-container">
+            <div class="color" id="xyz-color-1"></div>
+            <div class="color" id="xyz-color-2"></div>
+            <div class="color" id="xyz-color-3"></div>
+            <div class="color" id="xyz-color-4"></div>
+            <div class="color" id="xyz-color-5"></div>
+            <div class="color" id="xyz-color-6"></div>
+          </div>
+        </div>
+
+        <div class="color-space-row" id="color-space-lab">
+          <h5 class="color-space-title">LAB</h5>
+          <div class="colors-container">
+            <div class="color" id="lab-color-1"></div>
+            <div class="color" id="lab-color-2"></div>
+            <div class="color" id="lab-color-3"></div>
+            <div class="color" id="lab-color-4"></div>
+            <div class="color" id="lab-color-5"></div>
+            <div class="color" id="lab-color-6"></div>
+          </div>
+        </div>
+
+        <div class="color-space-row" id="color-space-luv">
+          <h5 class="color-space-title">LUV</h5>
+          <div class="colors-container">
+            <div class="color" id="luv-color-1"></div>
+            <div class="color" id="luv-color-2"></div>
+            <div class="color" id="luv-color-3"></div>
+            <div class="color" id="luv-color-4"></div>
+            <div class="color" id="luv-color-5"></div>
+            <div class="color" id="luv-color-6"></div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>
+
